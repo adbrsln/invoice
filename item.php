@@ -1,15 +1,42 @@
 <?php
-$companyName = $_POST['companyName'];
-$email = $_POST['email'];
-$pn = $_POST['pn'];
-$street = $_POST['street'];
-$apt = $_POST['apt'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$postal = $_POST['postal'];
-$country = $_POST['country'];
-arr[] = {$companyName,$email,}
-$_SESSION['companyDetails'] = 
+		
+	session_start();
+	
+	if(isset($_POST['submit_company'])){
+		
+		$companyName = $_POST['companyName'];
+		$email = $_POST['email'];
+		$pn = $_POST['pn'];
+		$street = $_POST['street'];
+		$apt = $_POST['apt'];
+		$city = $_POST['city'];
+		$state = $_POST['state'];
+		$postal = $_POST['postal'];
+		$country = $_POST['country'];
+		
+		$_SESSION['companyDetails'] = array(
+			'companyName' => $companyName,
+			'email' => $email,
+			'pn' => $pn,
+			'street' => $street,
+			'apt' => $apt,
+			'city' => $city,
+			'state' => $state,
+			'postal' => $postal,
+			'country' => $country
+		);
+	}else{
+		$companyName = $_SESSION['companyDetails']['companyName'];
+		$email = $_SESSION['companyDetails']['email'];
+		$pn = $_SESSION['companyDetails']['pn'];
+		$street = $_SESSION['companyDetails']['street'];
+		$apt = $_SESSION['companyDetails']['apt'];
+		$city = $_SESSION['companyDetails']['city'];
+		$state = $_SESSION['companyDetails']['state'];
+		$postal = $_SESSION['companyDetails']['postal'];
+		$country = $_SESSION['companyDetails']['country'];
+	}
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
