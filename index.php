@@ -92,7 +92,7 @@
         
       </div>
       
-      <button type="submit" name="submit" class="btn btn-outline-primary float-right">Next: Insert Item <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <button type="submit" name="submit_company" class="btn btn-outline-primary float-right">Next: Insert Item <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
       </form>
         
 
